@@ -138,7 +138,7 @@
           return " var " + camel + " = $xonom.require('" + abs + "');\r\n" + content + "";
         };
         applyRoute = function(name){
-          return " $router.post('" + prefix + module + "/" + name + "', make(" + camel + "." + name + "));";
+          return " $router.post('/" + prefix + module + "/" + name + "', make(" + camel + "." + name + "));";
         };
         return wrapController(
         join('\r\n')(

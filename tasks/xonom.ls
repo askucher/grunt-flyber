@@ -108,7 +108,7 @@ module.exports = (grunt)->
                       #content
                     "
                 const apply-route = (name)->
-                   " $router.post('#{prefix}#{module}/#name', make(#camel.#name));
+                   " $router.post('/#{prefix}#{module}/#name', make(#camel.#name));
                    "
                 
                 filename |> get-methods-from-file
