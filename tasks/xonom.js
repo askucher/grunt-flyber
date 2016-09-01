@@ -21,9 +21,8 @@
               },
               data: args
             };
-            $http(options).then(function(data){
-              console.log(arguments);
-              return callback(null, data.result);
+            $http(options).then(function(config){
+              return callback(null, config.data.result);
             }, function(err){
               return callback(err);
             });

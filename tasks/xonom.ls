@@ -17,9 +17,8 @@ module.exports = (grunt)->
                           internal: \yes
                         data: args 
                     $http(options).then do 
-                        * (data)->
-                            console.log arguments
-                            callback null, data.result
+                        * (config)->
+                            callback null, config.data.result
                         * (err)->
                             callback err
             const make-route = @options!.make-route ? (func) ->

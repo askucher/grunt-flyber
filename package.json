@@ -1,4 +1,18 @@
 {
+  "name": "grunt-xonom",
+  "description": "Provides clean communication between angular and express",
+  "version": "0.1.44",
+  "uperversion": "0.1",
+  "subversion": 44,
+  "homepage": "https://github.com/gruntjs/",
+  "author": {
+    "name": "Gotogether",
+    "url": "http://gruntjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:askucher/grunt-xonom.git"
+  },
   "bugs": {
     "url": "https://github.com/askucher/grunt-xonom/issues"
   },
@@ -8,34 +22,6 @@
       "url": "https://github.com/askucher/grunt-xonom/blob/master/LICENSE-MIT"
     }
   ],
-  "_resolved": "https://registry.npmjs.org/grunt-xonom-api/-/grunt-xonom-api-0.6.0.tgz",
-  "_shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
-  "directories": {},
-  "maintainers": [],
-  "_npmUser": {
-    "name": "askucher",
-    "email": "a.stegno@gmail.com"
-  },
-  "_npmVersion": "0.1.00",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:askucher/grunt-xonom.git"
-  },
-  "author": {
-    "name": "Gotogether",
-    "url": "http://gruntjs.com/"
-  },
-  "homepage": "https://github.com/gruntjs/",
-  "subversion": 43,
-  "uperversion": "0.1",
-  "version": "0.1.43",
-  "description": "Provides clean communication between angular and express",
-  "name": "grunt-xonom",
-  "_from": "grunt-xonom-api@>0.1",
-  "dist": {
-    "shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
-    "tarball": "http://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-0.6.0.tgz"
-  },
   "engines": {
     "node": ">= 0.8.0"
   },
@@ -58,5 +44,19 @@
     "tasks",
     "LICENSE-MIT"
   ],
-  "_id": "grunt-xonom-api@0.6.0"
+  "_id": "grunt-xonom-api@0.6.0",
+  "dist": {
+    "shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
+    "tarball": "http://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-0.6.0.tgz"
+  },
+  "_from": "grunt-xonom-api@>0.1",
+  "_npmVersion": "0.1.00",
+  "_npmUser": {
+    "name": "askucher",
+    "email": "a.stegno@gmail.com"
+  },
+  "maintainers": [],
+  "directories": {},
+  "_shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
+  "_resolved": "https://registry.npmjs.org/grunt-xonom-api/-/grunt-xonom-api-0.6.0.tgz"
 }
