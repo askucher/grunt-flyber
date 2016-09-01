@@ -2,19 +2,27 @@
 (function(){
   module.exports = function(grunt){
     return grunt.registerTask('xonom', 'Generate api service and route for express', function(){
-      var input, output, makeService, ref$, makeRoute, fs, map, makeObj, join, makeAngularService, getMethods, getMethodsFromFile, camelize, generateObj, path, mapRoute, applyTemplate;
+      var input, output, prefix, ref$, makeService, makeRoute, fs, map, makeObj, join, makeAngularService, getMethods, getMethodsFromFile, camelize, generateObj, path, mapRoute, applyTemplate;
       input = this.options().input;
       output = this.options().output;
+      prefix = (ref$ = this.options().prefix) != null ? ref$ : '/';
       makeService = (ref$ = this.options().makeService) != null
         ? ref$
         : function(name){
           return function(){
-            var args, callback;
+            var args, callback, options;
             args = [].slice.call(arguments);
             callback = args.pop();
-            $http.post(name, args).success(function(data){
+            options = {
+              method: 'POST',
+              headers: {
+                internal: "yes"
+              },
+              data: args
+            };
+            $http(options).then(function(data){
               return callback(null, data.result);
-            }).error(function(err){
+            }, function(err){
               return callback(err);
             });
           };
@@ -22,17 +30,21 @@
       makeRoute = (ref$ = this.options().makeRoute) != null
         ? ref$
         : function(func){
-          return function(req, resp){
+          return function(req, resp, next){
             var body, ref$;
-            body = (ref$ = req.body) != null
-              ? ref$
-              : [];
-            body.push(function(result){
-              return resp.send({
-                result: result
+            if (req.headers.internal === 'yes') {
+              body = (ref$ = req.body) != null
+                ? ref$
+                : [];
+              body.push(function(result){
+                return resp.send({
+                  result: result
+                });
               });
-            });
-            func.apply(this, body);
+              func.apply(this, body);
+            } else {
+              next();
+            }
           };
         };
       fs = require('fs');
@@ -101,7 +113,7 @@
           return "\r\n   " + camel + " : " + content;
         };
         generateObject = function(name){
-          return "\r\n     " + name + " : make('" + module + "/" + name + "')";
+          return "\r\n     " + name + " : make(" + prefix + module + "/" + name + "')";
         };
         return makeNamedObj(
         makeObj(
@@ -125,7 +137,7 @@
           return " var " + camel + " = $xonom.require('" + abs + "');\r\n" + content + "";
         };
         applyRoute = function(name){
-          return " $router.post('/" + module + "/" + name + "', make(" + camel + "." + name + "));";
+          return " $router.post('" + prefix + module + "/" + name + "', make(" + camel + "." + name + "));";
         };
         return wrapController(
         join('\r\n')(

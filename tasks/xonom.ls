@@ -3,23 +3,33 @@ module.exports = (grunt)->
       * \xonom
       * 'Generate api service and route for express'
       * ->
-            const input = @options!.input
-            const output = @options!.output
-            const make-service = @options!.make-service ? (name)->
+            input = @options!.input
+            output = @options!.output
+            prefix = @options!.prefix ? \/
+            make-service = @options!.make-service ? (name)->
                 !->
                     const args = [].slice.call(arguments)
                     const callback = args.pop!
-                    $http
-                      .post name, args 
-                      .success (data)-> callback null, data.result
-                      .error (err)-> callback err
+                    options = 
+                        method: \POST
+                        headers: 
+                          internal: "yes"
+                        data: args 
+                    $http(options).then do 
+                        * (data)->
+                            callback null, data.result
+                        * (err)->
+                            callback err
             const make-route = @options!.make-route ? (func) ->
-                (req, resp) !->
-                    body = req.body ? []
-                    body.push (result)->
-                      resp.send do 
-                          result: result
-                    func.apply this, body
+                (req, resp, next) !->
+                    if req.headers.internal is \yes
+                        body = req.body ? []
+                        body.push (result)->
+                          resp.send do 
+                              result: result
+                        func.apply this, body
+                    else 
+                        next!
             
             #input: server controllers filenames array
             #output: generated angular service 'api'
@@ -71,7 +81,7 @@ module.exports = (grunt)->
                     "\r\n   #camel : #content"
                 const generate-object = (name)->
                   "
-                     \r\n     #name : make('#module/#name')
+                     \r\n     #name : make(#{prefix}#{module}/#name')
                   "
                 
                 filename |> get-methods-from-file
@@ -97,7 +107,7 @@ module.exports = (grunt)->
                       #content
                     "
                 const apply-route = (name)->
-                   " $router.post('/#module/#name', make(#camel.#name));
+                   " $router.post('#{prefix}#{module}/#name', make(#camel.#name));
                    "
                 
                 filename |> get-methods-from-file

@@ -1,50 +1,23 @@
 {
+  "_shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
+  "_resolved": "https://registry.npmjs.org/grunt-xonom-api/-/grunt-xonom-api-0.6.0.tgz",
+  "maintainers": [],
+  "directories": {},
+  "_npmVersion": "0.1.00",
+  "_npmUser": {
+    "name": "askucher",
+    "email": "a.stegno@gmail.com"
+  },
+  "dist": {
+    "shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
+    "tarball": "http://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-0.6.0.tgz"
+  },
+  "_from": "grunt-xonom-api@>0.1",
   "files": [
     "tasks",
     "LICENSE-MIT"
   ],
   "_id": "grunt-xonom-api@0.6.0",
-  "peerDependencies": {
-    "grunt": "~0.4.0"
-  },
-  "keywords": [
-    "gruntplugin"
-  ],
-  "dependencies": {
-    "xonom": "latest"
-  },
-  "devDependencies": {
-    "grunt": "~0.4.0"
-  },
-  "engines": {
-    "node": ">= 0.8.0"
-  },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "_from": "grunt-xonom-api@>0.1",
-  "dist": {
-    "shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
-    "tarball": "http://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-0.6.0.tgz"
-  },
-  "_npmUser": {
-    "name": "askucher",
-    "email": "a.stegno@gmail.com"
-  },
-  "_npmVersion": "0.1.00",
-  "directories": {},
-  "maintainers": [],
-  "_resolved": "https://registry.npmjs.org/grunt-xonom-api/-/grunt-xonom-api-0.6.0.tgz",
-  "_shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
-  "bugs": {
-    "url": "https://github.com/askucher/grunt-xonom/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/askucher/grunt-xonom/blob/master/LICENSE-MIT"
-    }
-  ],
   "author": {
     "name": "Gotogether",
     "url": "http://gruntjs.com/"
@@ -53,10 +26,37 @@
     "type": "git",
     "url": "git@github.com:askucher/grunt-xonom.git"
   },
-  "subversion": 37,
+  "subversion": 38,
   "homepage": "https://github.com/gruntjs/",
-  "version": "0.1.37",
+  "version": "0.1.38",
   "uperversion": "0.1",
   "name": "grunt-xonom",
-  "description": "Provides clean communication between angular and express"
+  "description": "Provides clean communication between angular and express",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/askucher/grunt-xonom/blob/master/LICENSE-MIT"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/askucher/grunt-xonom/issues"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "dependencies": {
+    "xonom": "latest"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  }
 }
