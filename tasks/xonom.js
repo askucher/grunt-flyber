@@ -22,7 +22,8 @@
               data: args
             };
             $http(options).then(function(data){
-              return callback(null, JSON.parse(data).result);
+              console.log(arguments);
+              return callback(null, data.result);
             }, function(err){
               return callback(err);
             });

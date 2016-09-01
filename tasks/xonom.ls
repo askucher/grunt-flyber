@@ -18,7 +18,8 @@ module.exports = (grunt)->
                         data: args 
                     $http(options).then do 
                         * (data)->
-                            callback null, JSON.parse(data).result
+                            console.log arguments
+                            callback null, data.result
                         * (err)->
                             callback err
             const make-route = @options!.make-route ? (func) ->
