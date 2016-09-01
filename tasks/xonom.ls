@@ -81,7 +81,7 @@ module.exports = (grunt)->
                     "\r\n   #camel : #content"
                 const generate-object = (name)->
                   "
-                     \r\n     #name : make(#{prefix}#{module}/#name')
+                     \r\n     #name : make('#{prefix}#{module}/#name')
                   "
                 
                 filename |> get-methods-from-file

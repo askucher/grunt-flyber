@@ -113,7 +113,7 @@
           return "\r\n   " + camel + " : " + content;
         };
         generateObject = function(name){
-          return "\r\n     " + name + " : make(" + prefix + module + "/" + name + "')";
+          return "\r\n     " + name + " : make('" + prefix + module + "/" + name + "')";
         };
         return makeNamedObj(
         makeObj(
