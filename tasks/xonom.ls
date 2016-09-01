@@ -14,11 +14,11 @@ module.exports = (grunt)->
                         method: \POST
                         url: name
                         headers: 
-                          internal: "yes"
+                          internal: \yes
                         data: args 
                     $http(options).then do 
                         * (data)->
-                            callback null, data.result
+                            callback null, JSON.parse(data).result
                         * (err)->
                             callback err
             const make-route = @options!.make-route ? (func) ->

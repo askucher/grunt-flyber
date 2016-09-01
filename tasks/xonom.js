@@ -17,12 +17,12 @@
               method: 'POST',
               url: name,
               headers: {
-                internal: "yes"
+                internal: 'yes'
               },
               data: args
             };
             $http(options).then(function(data){
-              return callback(null, data.result);
+              return callback(null, JSON.parse(data).result);
             }, function(err){
               return callback(err);
             });

@@ -1,45 +1,34 @@
 {
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:askucher/grunt-xonom.git"
+  },
+  "author": {
+    "name": "Gotogether",
+    "url": "http://gruntjs.com/"
+  },
+  "_id": "grunt-xonom-api@0.6.0",
+  "files": [
+    "tasks",
+    "LICENSE-MIT"
+  ],
+  "keywords": [
+    "gruntplugin"
+  ],
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "dependencies": {
+    "xonom": "latest"
+  },
   "_npmVersion": "0.1.00",
   "_npmUser": {
     "name": "askucher",
     "email": "a.stegno@gmail.com"
   },
-  "dist": {
-    "shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
-    "tarball": "http://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-0.6.0.tgz"
-  },
-  "_from": "grunt-xonom-api@>0.1",
-  "name": "grunt-xonom",
-  "description": "Provides clean communication between angular and express",
-  "version": "0.1.41",
-  "uperversion": "0.1",
-  "dependencies": {
-    "xonom": "latest"
-  },
-  "devDependencies": {
-    "grunt": "~0.4.0"
-  },
-  "peerDependencies": {
-    "grunt": "~0.4.0"
-  },
-  "keywords": [
-    "gruntplugin"
-  ],
-  "files": [
-    "tasks",
-    "LICENSE-MIT"
-  ],
-  "_id": "grunt-xonom-api@0.6.0",
-  "author": {
-    "name": "Gotogether",
-    "url": "http://gruntjs.com/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:askucher/grunt-xonom.git"
-  },
-  "subversion": 41,
-  "homepage": "https://github.com/gruntjs/",
   "maintainers": [],
   "directories": {},
   "_shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
@@ -58,5 +47,16 @@
   },
   "engines": {
     "node": ">= 0.8.0"
+  },
+  "homepage": "https://github.com/gruntjs/",
+  "subversion": 42,
+  "uperversion": "0.1",
+  "version": "0.1.42",
+  "description": "Provides clean communication between angular and express",
+  "name": "grunt-xonom",
+  "_from": "grunt-xonom-api@>0.1",
+  "dist": {
+    "shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
+    "tarball": "http://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-0.6.0.tgz"
   }
 }
