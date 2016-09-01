@@ -15,6 +15,7 @@
             callback = args.pop();
             options = {
               method: 'POST',
+              url: name,
               headers: {
                 internal: "yes"
               },

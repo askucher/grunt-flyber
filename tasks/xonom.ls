@@ -12,6 +12,7 @@ module.exports = (grunt)->
                     const callback = args.pop!
                     options = 
                         method: \POST
+                        url: name
                         headers: 
                           internal: "yes"
                         data: args 
