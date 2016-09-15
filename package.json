@@ -1,41 +1,27 @@
 {
-  "directories": {},
-  "maintainers": [],
-  "_npmUser": {
-    "name": "askucher",
-    "email": "a.stegno@gmail.com"
-  },
-  "_npmVersion": "0.1.00",
-  "_from": "grunt-flyber-api@>0.1",
-  "dist": {
-    "shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
-    "tarball": "http://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-0.6.0.tgz"
-  },
-  "description": "Provides clean communication between angular and express",
-  "name": "grunt-flyber",
-  "keywords": [
-    "gruntplugin"
-  ],
-  "peerDependencies": {
-    "grunt": "~0.4.0"
-  },
-  "_id": "grunt-flyber-api@0.6.0",
-  "files": [
-    "tasks",
-    "LICENSE-MIT"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:askucher/grunt-flyber.git"
-  },
+  "subversion": 47,
+  "homepage": "https://github.com/gruntjs/",
   "author": {
     "name": "Gotogether",
     "url": "http://gruntjs.com/"
   },
-  "homepage": "https://github.com/gruntjs/",
-  "subversion": 46,
-  "uperversion": "0.1",
-  "version": "0.1.46",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:askucher/grunt-flyber.git"
+  },
+  "files": [
+    "tasks",
+    "LICENSE-MIT"
+  ],
+  "_id": "grunt-flyber-api@0.6.0",
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "directories": {},
+  "maintainers": [],
   "_resolved": "https://registry.npmjs.org/grunt-flyber-api/-/grunt-flyber-api-0.6.0.tgz",
   "_shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
   "bugs": {
@@ -58,5 +44,19 @@
   },
   "devDependencies": {
     "grunt": "~0.4.0"
+  },
+  "version": "0.1.47",
+  "uperversion": "0.1",
+  "name": "grunt-flyber",
+  "description": "Provides clean communication between angular and express",
+  "dist": {
+    "shasum": "f532dba4b8212674c7c013e146bda6638b9048f6",
+    "tarball": "http://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-0.6.0.tgz"
+  },
+  "_from": "grunt-flyber-api@>0.1",
+  "_npmVersion": "0.1.00",
+  "_npmUser": {
+    "name": "askucher",
+    "email": "a.stegno@gmail.com"
   }
 }

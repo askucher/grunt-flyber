@@ -36,7 +36,7 @@ module.exports = function($db) {
 
 ###User.controller.client.js
 
-And use them on client side. Xonom generates middleware for you
+And use them on client side. Flyber generates middleware for you
 
 
 
