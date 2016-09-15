@@ -1,4 +1,4 @@
-# grunt-xonom
+# grunt-flyber
 Script generator between angularjs and expressjs 
 
 ##EXAMPLE
@@ -44,14 +44,14 @@ And use them on client side. Xonom generates middleware for you
 
 ```Javascript 
 
-app.controller("user", function($scope, $xonom) {
+app.controller("user", function($scope, $flyber) {
   //`user` extracted from filename
-  $xonom.user.all(function(err, users)) {
+  $flyber.user.all(function(err, users)) {
     $scope.users = users;
   };
   
   $scope.getDetails = function(id) {
-     $xonom.user.one(id, function(err, details) { 
+     $flyber.user.one(id, function(err, details) { 
         $scope.details = details;
      };
   };
@@ -78,43 +78,43 @@ app.controller("user", function($scope, $xonom) {
 
 
 #install
-* npm install xonom grunt-xonom
-* add grunt task grunt-xonom into your gruntfile.js
+* npm install flyber grunt-flyber
+* add grunt task grunt-flyber into your gruntfile.js
 
 ```Javascript
 grunt.initConfig({
-  xonom: {
+  flyber: {
       options: {
         input: {
           controllers: [ 'user.controller.server.js' ]
         },
         output: {
-           angularService: "xonom.service.js"
+           angularService: "flyber.service.js"
            /*,makeService: function() { ... } */
-           ,expressRoute: "xonom.route.js"
+           ,expressRoute: "flyber.route.js"
            /*,makeRoute: function() { ... } */
   }
  }
 });
 
-grunt.registerTask("grunt-xonom");
+grunt.registerTask("grunt-flyber");
 ```
-This task generates 2 files xonom.service.js, xonom.route.js based on input controllers
+This task generates 2 files flyber.service.js, flyber.route.js based on input controllers
 
-xonom.service.js contains angular service declaration with generated functions for communication with server
-xonom.route.js contains express routes for communication with client
+flyber.service.js contains angular service declaration with generated functions for communication with server
+flyber.route.js contains express routes for communication with client
 
-* add line into your server.js file in order to attach xonom.route.js into your express
+* add line into your server.js file in order to attach flyber.route.js into your express
 
 ```Javascript
 var express = 
   require("express");
-var xonom = 
-  require("xonom");
+var flyber = 
+  require("flyber");
 
 var router = express();
-xonom.object("$router", router);
-xonom.require("./xonom.route.js")
+flyber.object("$router", router);
+flyber.require("./flyber.route.js")
 ```
 
 * add line into your angular.js module declaration file
@@ -123,11 +123,11 @@ xonom.require("./xonom.route.js")
 <head>
   ...
   <script type="text/javascript" src="angular.js" />
-  <script type="text/javascript" src="xonom.service.js" />
+  <script type="text/javascript" src="flyber.service.js" />
   ...
 </head>
 ```
 
 ```Javascript
-angular.module("app", ["xonom"]);
+angular.module("app", ["flyber"]);
 ```
